@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 12, 2024 at 06:54 AM
+-- Generation Time: Dec 16, 2024 at 08:30 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -38,7 +38,7 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `name`, `image`) VALUES
-(1, 'Moblie Phones', 'book1.jpg'),
+(1, 'Moblie Phone', 'book1.jpg'),
 (3, 'Book', 'book3.jpg'),
 (5, 'Shirts', 'book5.jpg'),
 (6, 'Paints', 'book8.jpg'),
@@ -65,11 +65,11 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `price`, `quantity`, `description`, `image`, `categoryid`) VALUES
-(9, 'Iphone', '$2000', '35', 'sasasasa', 'book11.jpg', 1),
+(9, 'Iphone', '$200000', '350', 'sasasasafvgdss', 'book11.jpg', 5),
 (12, 'White Jeans', '$300', '15', 'asasadasasa', 'book10.jpg', 3),
 (13, 'Bulb1', '$500', '50', 'sasasa\r\n', 'clinic4-home-icon-1.png', 7),
 (14, 'T_Shirt', '1500000', '20', 'adsdsfc', 'book8.jpg', 3),
-(17, 'Yoga ', '$1500', '5', 'asasas', 'book3.jpg', 3);
+(17, 'Yoga ', '$1500', '5', 'asasas', 'book3.jpg', 6);
 
 --
 -- Indexes for dumped tables

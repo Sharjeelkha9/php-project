@@ -11,7 +11,7 @@ if (isset($_POST['addCategory'])) {
     $imagename = $_FILES['catImage']['name'];
     $imageobject = $_FILES['catImage']['tmp_name'];
     $extension = pathinfo($imagename, PATHINFO_EXTENSION);
-    $pathdirectory = "img/categories/" . $imagename;
+    $pathdirectory = "img/categories/". $imagename;
     if ($extension == "jpg" || $extension == "png" || $extension == "jpeg" || $extension == "webp") {
         if (move_uploaded_file($imageobject, $pathdirectory)) {
             //query Prepration
@@ -66,8 +66,6 @@ if (isset($_POST['deleteCategory'])) {
     $query->execute();
     echo "<script>alert('Data Deleted Successfully')</script>";
 }
-
-
 //add Products 
 
 if (isset($_POST['addProducts'])) {
