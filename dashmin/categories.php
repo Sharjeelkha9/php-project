@@ -7,7 +7,15 @@ include "components/header.php";
         <div class="col-lg-12">
             <button type="button" class="btn btn-primary m-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Add Category</button>
         </div>
-        <div class="col-md-6 my-3 mx-3">
+            <tbody>
+                <?php
+                $query = $pdo->query("select * from categories");
+                $rows = $query->fetchALL(PDO::FETCH_ASSOC);
+                if (empty($rows)) {
+                    echo "<h3 class='text-center'>Category not found in the table</h3>";
+                } else { 
+                    ?>
+                    <div class="col-md-6 my-3 mx-3">
             <h3>ADD CATEGORY</h3>
         </div>
         <table class="table">
@@ -18,10 +26,8 @@ include "components/header.php";
                     <th scope="col" colspan="2">Action</th>
                 </tr>
             </thead>
-            <tbody>
-                <?php
-                $query = $pdo->query("select * from categories");
-                $rows = $query->fetchALL(PDO::FETCH_ASSOC);
+            <?php
+                
                 foreach($rows as $keys){
                     ?>
                     <tr>
@@ -84,8 +90,13 @@ include "components/header.php";
                 ?>
             </tbody>
         </table>
+        <?php
+}
+?>  
     </div>
+
 </div>
+            
 <!-- Blank End -->
 
 <!-- add category Modal -->
